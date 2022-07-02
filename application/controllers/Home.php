@@ -11,7 +11,7 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $data['judul'] = "Home";
+        $data['judul'] = "Home - Sikos";
         $this->load->view('frontend/layout/header', $data);
         $this->load->view("frontend/vw_home", $data);
         $this->load->view('frontend/layout/footer', $data);
