@@ -51,18 +51,25 @@
         <div class="row align-items-center">
           
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo m-0 p-0"><a href="index.html" class="mb-0">RumbaiKos</a></h1>
+            <h1 class="mb-0 site-logo m-0 p-0"><a href="<?= base_url();?>#home-section" class="mb-0">RumbaiKos</a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#properties-section" class="nav-link">Rekomendasi Kos</a></li>
+                <li><a href="<?= base_url();?>#home-section" class="nav-link">Home</a></li>
+                <li><a href="<?= base_url();?>#recommend" class="nav-link">Rekomendasi Kos</a></li>
                 <li><a href="#" class="nav-link">Panduan Pengguna</a></li>
                 <li><a href="#" class="nav-link">Pemilik Kos?</a></li>
-                <li><a href="#" class="nav-link">Login</a></li>
+                <?php 
+                  if ($this->session->userdata('email')){;
+                ?>
+                <li><a href="<?= base_url();?>beranda" class="nav-link">Beranda</a></li>
+                <li><a href="<?= base_url();?>auth/logout" class="nav-link">Logout</a></li>
+                <?php }else{?>
+                  <li><a href="<?= base_url();?>auth/login" class="nav-link">Login</a></li>
+                  <?php }?>
               </ul>
             </nav>
           </div>
