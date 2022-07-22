@@ -22,6 +22,7 @@
           <div class="col-lg-5 pl-lg-5 ml-auto">
             <div class="mb-5">
               <h3 class="text-black mb-4">Deskripsi</h3>
+              <p>Jenis Kos : <?= $kos['kos_jenis'];?></p>
               <p>Alamat : <?= $kos['kos_alamat'];?></p>
               <?= $kos['kos_diskripsi'];?>
             </div>

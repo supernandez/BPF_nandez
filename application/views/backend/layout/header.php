@@ -12,6 +12,8 @@
   <link href="<?= base_url('assets/admin/');?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="<?= base_url('assets/admin/');?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="<?= base_url('assets/admin/');?>css/ruang-admin.min.css" rel="stylesheet">
+  <link href="<?= base_url('assets/admin/');?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -23,7 +25,12 @@
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?= base_url();?>">
+          <i class="fas fa-fw fa-home"></i>
+          <span>Kembali ke Home</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('beranda');?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Beranda</span></a>
       </li>
@@ -32,15 +39,9 @@
         Menu
       </div>
       <li class="nav-item">
-        <a class="nav-link" href="ui-colors.html">
-          <i class="fas fa-fw fa-home"></i>
+        <a class="nav-link" href="<?= base_url('beranda/mykos');?>">
+          <i class="fas fa-fw fa-heart"></i>
           <span>Kos Saya</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="ui-colors.html">
-          <i class="fas fa-fw fa-star"></i>
-          <span>Review Saya</span>
         </a>
       </li>
     </ul>
@@ -58,7 +59,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="<?= base_url('assets/admin/');?>img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                <span class="ml-2 d-none d-lg-inline text-white small"><?= $user['user_nama'];?></span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">

@@ -9,8 +9,8 @@
             </ol>
           </div>
 
-          <div class="text-center">
-            <img src="<?= base_url('assets/admin/');?>img/think.svg" style="max-height: 90px">
-            <h4 class="pt-3">Selamat datang di <b>Beranda</b> Sikos!</h4>
-          </div>
+            <div class="text-center">
+              <img src="<?= base_url('assets/admin/');?>img/think.svg" style="max-height: 90px">
+              <h4 class="pt-3">Selamat datang di <b>Beranda</b> Sikos!</h4>
+            </div>
 
